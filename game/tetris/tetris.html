@@ -1,0 +1,58 @@
+<html lang="en">
+  <head>
+    <title>Tetris Game</title>
+    <link rel="stylesheet" href="../../assets/bootstrap/bootstrap.min.css">
+    <link rel="stylesheet" href="../../assets/bootstrap-icons/bootstrap-icons.css">
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="./tetris.css">
+  </head>
+  <body>
+    <!-- <div class="container">
+      <header class="blog-header py-1 border-bottom">
+          <div class="row flex-nowrap justify-content-between align-items-center">
+              <div class="col-md-4 col-sm-8 text-center mx-auto">
+                  <a class="header-logo text-dark" href="#">Chill Zone</a>
+              </div>
+          </div>
+      </header>
+
+      <div class="nav-scroller py-1">
+          <nav class="col-lg-6 col-md-8 col-sm-10 mx-auto nav d-flex justify-content-between">
+              <a class="h6 nav-link link-dark" href="../../index.html">Home</a>
+              <a class="h6 nav-link link-dark" href="../../game.html">Game</a>
+              <a class="h6 nav-link link-dark" href="../../movie.html">Movie</a>
+              <a class="h6 nav-link link-dark" href="../../book.html">Book</a>
+              <a class="h6 nav-link link-dark" href="../../contact.html">Contact</a>
+          </nav>
+      </div>
+    </div> -->
+
+    <center class="mt-5">
+      <canvas id="canvas" width="400" height="600"> </canvas>
+      <canvas
+        id="nextShapeCanvas"
+        width="90"
+        height="90"
+        style="position: absolute; top: 110"
+      >
+      </canvas>
+
+      <canvas
+        id="scoreCanvas"
+        width="300"
+        height="500"
+        style="position: absolute; top: 180"
+      >
+      </canvas>
+      <img id="image" src="rotations.png" />
+
+      <div class="hide" id="gameOver">
+        <h2>Game Over!</h2>
+        <button class="btn btn-warning" onclick="reset()">Play Again</button>
+      </div>
+    </center>
+    <script src="../../assets/bootstrap/bootstrap.min.js"></script>
+    <script src="../../assets/bootstrap-icons/bootstrap-icons.json"></script>
+    <script src="tetris.js"></script>
+  </body>
+</html>

@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en" class="h-100">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entertainment website for Pleasure | Contact</title>
+  <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/bootstrap-icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+  <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
+</head>
+
+<body class="d-flex flex-column h-100 bg-info">
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="bg-secondary fixed-top d-flex align-items-center shadow">
+    <div class="container">
+      <div class="header-container bg-secondary d-flex align-items-center justify-content-between">
+        <div class="logo">
+          <h1 class="text-light font-monospace"><a href="index.html"><span>Entertainment Website for Pleasure</span></a></h1>
+        </div>
+
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a class="nav-link scrollto fw-bold text-white" href="./index.html">Home</a></li>
+            <li><a class="nav-link scrollto fw-bold text-white" href="./game.html">Game</a></li>
+            <li><a class="nav-link scrollto fw-bold text-white" href="./movie.html">Movie</a></li>
+            <li><a class="nav-link scrollto fw-bold text-white" href="./book.html">Book</a></li>
+            <li><a class="nav-link scrollto fw-bold text-warning" href="./contact.html">Contact</a></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+      </div><!-- End Header Container -->
+    </div>
+  </header><!-- End Header -->
+
+
+  <section id="contact" class="contact">
+    <div class="container">
+
+      <div class="row gy-4 justify-content-center">
+
+        <div class="col-lg-3">
+          <div class="info-item d-flex">
+            <i class="bi bi-geo-alt flex-shrink-0 bg-dark text-light"></i>
+            <div>
+              <h4>Location:</h4>
+              <p>35A Main Road <br>
+                Maubin, Ayeyarwady, Myanmar</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3">
+          <div class="info-item d-flex">
+            <i class="bi bi-envelope flex-shrink-0 bg-dark text-light"></i>
+            <div>
+              <h4>Email:</h4>
+              <p>ewfp.info@gmail.com</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-lg-3">
+          <div class="info-item d-flex">
+            <i class="bi bi-phone flex-shrink-0 bg-dark text-light"></i>
+            <div>
+              <h4>Call:</h4>
+              <p>+95 9 400 422 421</p>
+            </div>
+          </div>
+        </div>
+
+      </div>
+
+      <div class="row justify-content-center mt-4">
+
+        <div class="col-lg-9">
+          <div class="eamil-form">
+            <div class="row">
+              <div class="col-md-6 form-group">
+                <input type="text" name="name" class="form-control" id="sendername" placeholder="Your Name" required>
+              </div>
+              <div class="col-md-6 form-group mt-3 mt-md-0">
+                <input type="email" class="form-control" name="reply_to" id="reply_to" placeholder="Your Email" required>
+              </div>
+            </div>
+            <div class="form-group mt-3">
+              <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+            </div>
+            <div class="form-group mt-3">
+              <textarea class="form-control" name="message" rows="5" placeholder="Message" id="message" required></textarea>
+            </div>
+            <div class="text-center mt-3"><button onclick="sendMail();" type="submit" class="btn btn-dark">Send Message</button></div>
+          </form>
+        </div>
+
+      </div>
+
+    </div>
+  </section>
+
+
+  <footer class="text-center text-white mt-5" style="background-color:#27292a;">
+    <!-- Grid container -->
+    <div class="container p-4"></div>
+    <!-- Grid container -->
+
+    <!-- Copyright -->
+    <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
+        <p class="float-center mb-1">
+            &copy; 2023 <strong class="link-info">Entertainment Website for Pleasure</strong>. All Rights
+            Reserved.<br>
+            Website Designed by <strong><a class="link-info"
+                    href="https://t.me/aung-khantkyaw">Laziest@nt</a></strong>
+
+        </p>
+    </div>
+    <!-- Copyright -->
+</footer>
+
+
+  <script src="./assets/bootstrap/bootstrap.min.js"></script>
+  <script src="./assets/bootstrap-icons/bootstrap-icons.json"></script>
+  <script>
+    function sendMail() {
+      (function () {
+        emailjs.init("Sa9SyHD_zpxtPhyha");
+      })();
+
+      let params = {
+        sendername : document.querySelector("#sendername").value,
+        to : "laziestant@gmail.com",
+        subject : document.querySelector("#subject").value,
+        reply_to : document.querySelector("#reply_to").value,
+        message : document.querySelector("#message").value,
+      };
+
+      let serviceID = "service_92zstgd";
+      let templateID = "template_ssbbd0r";
+
+      emailjs.send(serviceID, templateID, params)
+      .then(res => {
+        alert("Email Sent Successfully!");
+      })
+      .catch();
+    }
+  </script>
+</body>
+
+</html>

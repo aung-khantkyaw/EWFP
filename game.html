@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Entertainment website for Pleasure | Game</title>
+  <link rel="shortcut icon" href="./assets/images/logo.png" type="image/x-icon">
+  <link rel="stylesheet" href="./assets/bootstrap/bootstrap.min.css">
+  <link rel="stylesheet" href="./assets/bootstrap-icons/bootstrap-icons.css">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background-image: url(./assets/images/gamebackground.jpg);
+    }
+
+    figure.card_img {
+      font-family: 'Raleway', Arial, sans-serif;
+      color: #fff;
+      position: relative;
+      overflow: hidden;
+      margin: 10px;
+      min-width: 220px;
+      max-width: 400px;
+      max-height: 400px;
+      width: 100%;
+      color: #000000;
+      text-align: center;
+      display: flex;
+      justify-content: center;
+    }
+
+    figure.card_img a {
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      position: absolute;
+      z-index: 1;
+    }
+
+    /* Custom CSS for vertical thumbnails */
+    .thumbnail-carousel {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      margin-top: 10px;
+      gap: 5px;
+    }
+
+    .thumbnail-item {
+      width: 200px;
+      height: auto;
+      margin-bottom: 10px;
+      cursor: pointer;
+      transition: opacity 0.3s;
+    }
+
+    .thumbnail-item img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .thumbnail-item.active {
+      opacity: 0.6;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <!-- ======= Header ======= -->
+  <header id="header" class="bg-secondary fixed-top d-flex align-items-center shadow">
+    <div class="container">
+      <div class="header-container bg-secondary d-flex align-items-center justify-content-between">
+        <div class="logo">
+          <h1 class="text-light font-monospace"><a href="index.html"><span>Entertainment Website for Pleasure</span></a>
+          </h1>
+        </div>
+
+        <nav id="navbar" class="navbar">
+          <ul>
+            <li><a class="nav-link scrollto fw-bold text-white" href="./index.html">Home</a></li>
+            <li><a class="nav-link scrollto fw-bold text-warning" href="./game.html">Game</a></li>
+            <li><a class="nav-link scrollto fw-bold text-white" href="./movie.html">Movie</a></li>
+            <li><a class="nav-link scrollto fw-bold text-white" href="./book.html">Book</a></li>
+            <li><a class="nav-link scrollto fw-bold text-white" href="./contact.html">Contact</a></li>
+          </ul>
+          <i class="bi bi-list mobile-nav-toggle"></i>
+        </nav><!-- .navbar -->
+
+      </div><!-- End Header Container -->
+    </div>
+  </header><!-- End Header -->
+
+  <div class="container md-5">
+    <div class="page-content shadow">
+
+      <!-- ***** Featured Games Start ***** -->
+      <div id="main-carousel" class="carousel slide" data-bs-ride="carousel">
+        <div class="row">
+          <div class="col-lg-8">
+            <div class="featured-games">
+              <div class="carousel-inner w-100">
+                <div class="carousel-item active">
+                  <figure class="card_img">
+                    <img src="./assets/images/tetris.png" alt="" class="img-fluid" />
+                    <a href="./game/tetris/tetris.html"></a>
+                  </figure>
+                </div>
+                <div class="carousel-item">
+                  <figure class="card_img">
+                    <img src="./assets/images/snake.png" alt="" class="img-fluid" />
+                    <a href="./game/Snake-Game/snake.html"></a>
+                  </figure>
+                </div>
+                <div class="carousel-item">
+                  <figure class="card_img">
+                    <img src="./assets/images/flappy.png" alt="" class="img-fluid" />
+                    <a href="./game/Flappy_Bird/index.html"></a>
+                  </figure>
+                </div>
+                <div class="carousel-item">
+                  <figure class="card_img">
+                    <img src="./assets/images/hangman.png" alt="" class="img-fluid" />
+                    <a href="./game/Hangman Game/index.html"></a>
+                  </figure>
+                </div>
+                <div class="carousel-item">
+                  <figure class="card_img">
+                    <img src="./assets/images/memoryCard.png" alt="" class="img-fluid" />
+                    <a href="./game/Memory_card/index.html"></a>
+                  </figure>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4">
+            <div class="top-downloaded">
+              <div class="thumbnail-carousel">
+                <div class="thumbnail-item" data-bs-target="#main-carousel" data-bs-slide-to="0">
+                  <img src="./assets/images/tetrisThumbnail.png" alt="Thumbnail 1">
+                </div>
+                <div class="thumbnail-item" data-bs-target="#main-carousel" data-bs-slide-to="1">
+                  <img src="./assets/images/snakeThumbnail.png" alt="Thumbnail 2">
+                </div>
+                <div class="thumbnail-item" data-bs-target="#main-carousel" data-bs-slide-to="2">
+                  <img src="./assets/images/flappyThumbnail.png" alt="Thumbnail 3">
+                </div>
+                <div class="thumbnail-item" data-bs-target="#main-carousel" data-bs-slide-to="3">
+                  <img src="./assets/images/hangmanThumbnail.png" alt="Thumbnail 4">
+                </div>
+                <div class="thumbnail-item" data-bs-target="#main-carousel" data-bs-slide-to="4">
+                  <img src="./assets/images/memoryCardThumbnail.png" alt="Thumbnail 5">
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!-- ***** Featured Games End ***** -->
+
+    </div>
+  </div>
+  <script src="./assets/bootstrap/bootstrap.min.js"></script>
+  <script src="./assets/bootstrap-icons/bootstrap-icons.json"></script>
+</body>
+
+</html>
