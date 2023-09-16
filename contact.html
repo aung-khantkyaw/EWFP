@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en" class="h-100">
+<html lang="en">
 
 <head>
   <meta charset="UTF-8">
@@ -12,14 +12,15 @@
   <script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@3/dist/email.min.js"></script>
 </head>
 
-<body class="d-flex flex-column h-100 bg-secondary">
+<body class="d-flex flex-column bg-secondary">
 
   <!-- ======= Header ======= -->
   <header id="header" class="bg-secondary fixed-top d-flex align-items-center shadow">
     <div class="container">
       <div class="header-container bg-secondary d-flex align-items-center justify-content-between">
         <div class="logo">
-          <h1 class="text-light font-monospace"><a href="index.html"><span>Entertainment Website for Pleasure</span></a></h1>
+          <h1 class="text-light font-monospace"><a href="index.html"><span>Entertainment Website for Pleasure</span></a>
+          </h1>
         </div>
 
         <nav id="navbar" class="navbar">
@@ -38,25 +39,23 @@
   </header><!-- End Header -->
 
 
-  <section id="contact" class="contact">
-    <div class="container">
-
+  <div class="container contact" id="contact">
+    <div class="page-content shadow">
       <div class="row gy-4 justify-content-center">
 
         <div class="col-lg-3">
           <div class="info-item d-flex">
-            <i class="bi bi-geo-alt flex-shrink-0 bg-dark text-light"></i>
+            <i class="bi bi-geo-alt flex-shrink-0 text-dark"></i>
             <div>
               <h4>Location:</h4>
-              <p>35A Main Road <br>
-                Maubin, Ayeyarwady, Myanmar</p>
+              <p>Maubin, Ayeyarwady, Myanmar</p>
             </div>
           </div>
         </div>
 
         <div class="col-lg-3">
           <div class="info-item d-flex">
-            <i class="bi bi-envelope flex-shrink-0 bg-dark text-light"></i>
+            <i class="bi bi-envelope flex-shrink-0 text-dark"></i>
             <div>
               <h4>Email:</h4>
               <p>ewfp.info@gmail.com</p>
@@ -66,7 +65,7 @@
 
         <div class="col-lg-3">
           <div class="info-item d-flex">
-            <i class="bi bi-phone flex-shrink-0 bg-dark text-light"></i>
+            <i class="bi bi-phone flex-shrink-0 text-dark"></i>
             <div>
               <h4>Call:</h4>
               <p>+95 9 400 422 421</p>
@@ -85,25 +84,28 @@
                 <input type="text" name="name" class="form-control" id="sendername" placeholder="Your Name" required>
               </div>
               <div class="col-md-6 form-group mt-3 mt-md-0">
-                <input type="email" class="form-control" name="reply_to" id="reply_to" placeholder="Your Email" required>
+                <input type="email" class="form-control" name="reply_to" id="reply_to" placeholder="Your Email"
+                  required>
               </div>
             </div>
             <div class="form-group mt-3">
               <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
             </div>
             <div class="form-group mt-3">
-              <textarea class="form-control" name="message" rows="5" placeholder="Message" id="message" required></textarea>
+              <textarea class="form-control" name="message" rows="5" placeholder="Message" id="message"
+                required></textarea>
             </div>
-            <div class="text-center mt-3"><button onclick="sendMail();" type="submit" class="btn btn-dark">Send Message</button></div>
-          </form>
+            <div class="text-center mt-3"><button onclick="sendMail();" type="submit"
+                class="btn btn-warning text-dark fw-bold">Send
+                Message</button></div>
+            </form>
+          </div>
+
         </div>
 
       </div>
-
     </div>
-  </section>
-
-
+  </div>
   <footer class="text-center text-white mt-5" style="background-color:#27292a;">
     <!-- Grid container -->
     <div class="container p-4"></div>
@@ -111,16 +113,15 @@
 
     <!-- Copyright -->
     <div class="text-center p-3" style="background-color: rgba(0, 0, 0, 0.2);">
-        <p class="float-center mb-1">
-            &copy; 2023 <strong class="link-info">Entertainment Website for Pleasure</strong>. All Rights
-            Reserved.<br>
-            Website Designed by <strong><a class="link-info"
-                    href="https://t.me/aung-khantkyaw">Laziest@nt</a></strong>
+      <p class="float-center mb-1">
+        &copy; 2023 <strong class="link-info">Entertainment Website for Pleasure</strong>. All Rights
+        Reserved.<br>
+        Website Designed by <strong><a class="link-info" href="https://t.me/aung-khantkyaw">Laziest@nt</a></strong>
 
-        </p>
+      </p>
     </div>
     <!-- Copyright -->
-</footer>
+  </footer>
 
 
   <script src="./assets/bootstrap/bootstrap.min.js"></script>
@@ -133,21 +134,21 @@
       })();
 
       let params = {
-        sendername : document.querySelector("#sendername").value,
-        to : "laziestant@gmail.com",
-        subject : document.querySelector("#subject").value,
-        reply_to : document.querySelector("#reply_to").value,
-        message : document.querySelector("#message").value,
+        sendername: document.querySelector("#sendername").value,
+        to: "ewfp.info@gmail.com",
+        subject: document.querySelector("#subject").value,
+        reply_to: document.querySelector("#reply_to").value,
+        message: document.querySelector("#message").value,
       };
 
       let serviceID = "service_92zstgd";
       let templateID = "template_ssbbd0r";
 
       emailjs.send(serviceID, templateID, params)
-      .then(res => {
-        alert("Email Sent Successfully!");
-      })
-      .catch();
+        .then(res => {
+          alert("Email Sent Successfully!");
+        })
+        .catch();
     }
   </script>
 </body>
